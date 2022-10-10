@@ -22,5 +22,5 @@ Previously, I earned my M.S. in <a href="https://fv.kaist.ac.kr/" target="_blank
 I also have a broad interest in learning general representations (e.g., self-supervised learning) and improving model's robustness to distribution shifts (e.g., domain generalization).</p>
 -->
 <p>
-  My research aims to effectively train multi-modality based deep neural networks (vision, audio and text). Also, I have a interest in techniques related to sign language for helping deaf people.
+  My research aims to effectively train multi-modality based deep neural networks (vision, audio and text). Also, I have an interest in techniques related to sign language for helping deaf people.
 </p>
