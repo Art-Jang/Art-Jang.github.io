@@ -22,5 +22,5 @@ Previously, I earned my M.S. in <a href="https://fv.kaist.ac.kr/" target="_blank
 I also have a broad interest in learning general representations (e.g., self-supervised learning) and improving model's robustness to distribution shifts (e.g., domain generalization).</p>
 -->
 <p>
-  My research aims to effectively train deep neural networks under limited labels and data, such as long-tailed/biased labels and unlabeled data. Also, I have a broad interest in techniques for learning general representations and improving model’s robustness to distribution shifts, such as uni-/multi-modal representation learning, domain generalization, etc.
+  My research aims to effectively train multi-modality based deep neural networks (vision, audio and text). Also, I have a interest in techniques related to sign language for helping deaf people.
 </p>
