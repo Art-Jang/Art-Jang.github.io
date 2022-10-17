@@ -14,7 +14,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-<p>I am currently a Ph.D. student advised by Prof. <a href="http://mm.kaist.ac.kr/" target="_blank">Joon Son Chung</a>, in <a href="https://fv.kaist.ac.kr/" target="_blank">Division of Future Vehicle</a> at <a href="https://kaist.ac.kr/en/" target="_blank">Korea Advanced Institute of Science and Technology (KAIST)</a>. 
+<p>I am currently a Ph.D. student advised by Prof. <a href="http://mm.kaist.ac.kr/joon/" target="_blank">Joon Son Chung</a>, in <a href="https://fv.kaist.ac.kr/" target="_blank">Division of Future Vehicle</a> at <a href="https://kaist.ac.kr/en/" target="_blank">Korea Advanced Institute of Science and Technology (KAIST)</a>. 
 Previously, I earned my M.S. in <a href="https://fv.kaist.ac.kr/" target="_blank">Division of Future Vehicle</a> from <a href="https://kaist.ac.kr/en/" target="_blank">KAIST</a> (Feb. 2022) and B.S. in <a href="https://cni.kw.ac.kr/" target="_blank">Division of Robotics</a> from <a href="https://www.kw.ac.kr/en/index.jsp" target="_blank">Kwangwoon University</a> (Feb. 2020). </p>
 
 <!--
@@ -22,5 +22,5 @@ Previously, I earned my M.S. in <a href="https://fv.kaist.ac.kr/" target="_blank
 I also have a broad interest in learning general representations (e.g., self-supervised learning) and improving model's robustness to distribution shifts (e.g., domain generalization).</p>
 -->
 <p>
-  My research aims to effectively train multi-modality based deep neural networks (vision, audio and text). Also, I have an interest in techniques related to sign language for helping deaf people.
+  My research aims to effectively train multi-modality-based deep neural networks (vision, audio and text). Also, I have an interest in techniques related to sign language for helping deaf people.
 </p>
