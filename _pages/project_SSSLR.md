@@ -108,10 +108,9 @@ abstract: >
               <a href="https://scholar.google.com/citations?user=XA8EOlEAAAAJ&hl=ko">In So Kweon</a><sup>1</sup>,</span>
             <span class="author-block">
               <a href="https://https://mm.kaist.ac.kr/joon/">Joon Son Chung</a><sup>1</sup>,</span>
-            </span>
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>KAIST, Daejeon, South Korea.</span>
+            <span class="author-block"><sup>1</sup>KAIST / Daejeon, South Korea.</span>
             <span class="author-block"><sup>2</sup>Hanyang University / Seoul, South Korea.</span>
           </div>
           <div class="column has-text-centered">
@@ -204,11 +203,10 @@ abstract: >
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="assets/daso/daso.mp4" type="video/mp4">
+        <source src="assets/ssslr/ssslr_demo.mp4" type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered is-size-5">
-        DASO framework for debiasing pseudo-labels by blending two complementary pseudo-labels.
-        Semantic alignment loss further alleviates the bias with balanced feature representations.
+        Our framework is intended to train sign language recognition models without additional annotations. Our model trained on weekly-labeled sign language datasets shows better or comparable performance compared to other methods using multiple modalities or additional knowledge.
       </h2>
     </div>
   </div>
@@ -246,7 +244,6 @@ abstract: >
             <div class="column">
               <img src="assets/daso/teaser.PNG"/>
             </div>
-            <!--/ figure -->
             <!-- caption -->
             <div class="column">
                 <h2 class="subtitle has-text-justified">
