@@ -308,7 +308,7 @@ abstract: >
         </div>
         <div class="hero-body">
           <div class="columns is-centered">
-            <div class="column is-9">
+            <div class="column is-12">
               <img src="assets/ssslr/qualitative.png"/>
             </div>
           </div>
