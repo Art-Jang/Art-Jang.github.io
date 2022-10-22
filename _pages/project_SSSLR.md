@@ -99,7 +99,7 @@ abstract: >
             <span class="author-block">
               <a href="https://ytaek-oh.github.io">Youngtaek Oh</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://https://chojw.github.io/">Jae Won Cho</a><sup>1</sup>,</span>
+              <a href="https://chojw.github.io/">Jae Won Cho</a><sup>1</sup>,</span>
             <span class="author-block">
               <a href="https://ytaek-oh.github.io">Myungchul Kim</a><sup>1</sup>,</span>
             <span class="author-block">
@@ -241,7 +241,7 @@ abstract: >
         <h3 class="title is-5">Robustness Comparison</h3>
         <div class="content has-text-justified">
           <p class="mb-4">
-            We show our framework's the robustness in a real world scenario by chainging scale and translation during the inference time. Futhermore, we show the failure cases of pose-detector in STMC, where the transformation (scale, translation) are adapted. Note that our framework requires only RGB modality.
+            We show our framework's the robustness in a real world scenario by chainging scale and translation during the inference time. Futhermore, we show the failure cases of pose-detector in STMC [1], where the transformation (scale, translation) are adapted. Note that our framework requires only RGB modality.
           </p>
           <div class="columns is-centered">
             <div class="column is-7">
@@ -258,9 +258,17 @@ abstract: >
         <h3 class="title is-5">Efficiency Analysis</h3>
         <div class="content has-text-justified">
           <p class="mb-4">
-            We compare the computational complexity with the most recent multi-cue based method, STMC. Even though the pose detector of STMC is light-weight, it still induces the bottleneck in the inference time. We highlight that DFConv significantly reduces both FLOPs and inference time by pulling out the pose estimator. For reference, in out environment, extracting human keypoints with HRNet from PHOENIX-2014 dataset takes 2-3 GPU days. Note that we implement STMC due to the absence of the code.
-          </p>
-          <img src="assets/ssslr/efficiency.png"/>
+            We compare the computational complexity with the most recent multi-cue based method, STMC. Even though the pose detector of STMC is light-weight, it still induces the bottleneck in the inference time. We highlight that DFConv significantly reduces both FLOPs and inference time by pulling out the pose estimator. For reference, in out environment, extracting human keypoints with HRNet [2] from PHOENIX-2014 dataset [3] takes 2-3 GPU days. Note that we implement STMC due to the absence of the code.
+        </div>
+        <div class="hero-body">
+          <div class="columns is-centered">
+            <div class="column is-6">
+              <img src="assets/ssslr/efficiency.png"/>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            Comparison of computational cost and inference time with STMC. (*): we directly take the reported results in the original STMC paper.
+          </h2>
         </div>
       </div>
     </div>
@@ -283,12 +291,12 @@ abstract: >
         <h3 class="title is-5">Divide and Focus Convolution</h3>
         <div class="hero-body">
           <div class="columns is-centered">
-            <div class="column is-5">
+            <div class="column is-9">
               <img src="assets/ssslr/dfconv.png"/>
             </div>
           </div>
           <h2 class="subtitle has-text-centered">
-            The comparison of GradCAM activation maps between Ours and VGG-11 backbone network. DFConv better highlights multiple individual elements (hands, faces) across the entire image area whereas VGG-11 simply attends to only hands.
+            The comparison of GradCAM [4] activation maps between Ours and VGG-11 backbone network. DFConv better highlights multiple individual elements (hands, faces) across the entire image area whereas VGG-11 [5] simply attends to only hands.
           </h2>
         </div>
         <!-- different imbalance -->
@@ -300,7 +308,7 @@ abstract: >
         </div>
         <div class="hero-body">
           <div class="columns is-centered">
-            <div class="column is-5">
+            <div class="column is-9">
               <img src="assets/ssslr/qualitative.png"/>
             </div>
           </div>
@@ -331,7 +339,7 @@ abstract: >
         <h3 class="title is-5">Limitation and Future Work</h3>
         <div class="content has-text-justified">
           <p>
-            Although we have shown that both non-manual and manual expressions are simultaneously captured from a sign video, the limitation of our work would come from the assumption that non-manual expressions occur in upper region of a frame, and vice versa for the manual expressions. While we address the issue by introducing the adaptability of the division ratio r at test time as shown in Fig. 1, not only the position, but also variations in scale of the signer (e.g. due to distance from camera) could be introduced in practical scenarios. Future CSLR works should embrace such practical challenges so that the recognition system can be deployed in the real world with ease. 
+            Although we have shown that both non-manual and manual expressions are simultaneously captured from a sign video, the limitation of our work would come from the assumption that non-manual expressions occur in upper region of a frame, and vice versa for the manual expressions. While we address the issue by introducing the adaptability of the division ratio r at test time, not only the position, but also variations in scale of the signer (e.g. due to distance from camera) could be introduced in practical scenarios. Future CSLR works should embrace such practical challenges so that the recognition system can be deployed in the real world with ease. 
           </p>
         </div>
       </div>
@@ -345,19 +353,22 @@ abstract: >
     <!-- Concurrent Work. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
+        <h2 class="title is-3">References</h2>
         <div class="content has-text-justified">
           <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
+            [1] Zhou, Hao, et al. "Spatial-temporal multi-cue network for continuous sign language recognition." Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 34. No. 07. 2020.
           </p>
           <p>
-            <a href="https://arxiv.org/abs/2112.04564">CoSSL</a> introduces a co-learning framework that decouples the learning of representation and classifier in imbalanced SSL.
+            [2] Sun, Ke, et al. "Deep high-resolution representation learning for human pose estimation." Proceedings of the IEEE/CVF conference on computer vision and pattern recognition. 2019
           </p>
           <p>
-            <a href="https://people.eecs.berkeley.edu/~xdwang/projects/DebiasPL/">DebiasMatch</a> proposes a general debiased learning for pseudo-labels based on counterfactual reasoning and adaptive margins.
+            [3] Koller, Oscar, Jens Forster, and Hermann Ney. "Continuous sign language recognition: Towards large vocabulary statistical recognition systems handling multiple signers." Computer Vision and Image Understanding 141 (2015): 108-125.
           </p>
           <p>
-            <a href="https://arxiv.org/abs/2204.02070">Spread Spurious Attribute (SSA)</a> proposes a method of adaptive thresholds for pseudo-labeling that does not rely on the assumption: identical class distributions of labeled and unlabeled data (Secs. 4.2 and 5.4).  
+            [4] Selvaraju, Ramprasaath R., et al. "Grad-cam: Visual explanations from deep networks via gradient-based localization." Proceedings of the IEEE international conference on computer vision. 2017.
+          </p>
+          <p>
+            [5] Simonyan, Karen, and Andrew Zisserman. "Very deep convolutional networks for large-scale image recognition." arXiv preprint arXiv:1409.1556 (2014).
           </p>
         </div>
       </div>
