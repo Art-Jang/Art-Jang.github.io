@@ -21,7 +21,7 @@ title: "Self-Sufficient Framework for Sign Language Recognition"
 #   }
 abstract: >
   <p>
-    The goal of this work is to devise a \emph{self-sufficient} CSLR framework that addresses the issues of sign language recognition, including (1) the demand for complex features such as hands, face, and mouth for understanding and (2) the absence of frame level annotations.
+    The goal of this work is to devise a self-sufficient CSLR framework that addresses the issues of sign language recognition, including (1) the demand for complex features such as hands, face, and mouth for understanding and (2) the absence of frame level annotations.
   </p>
   <p>
     To this end, we propose (1) Divide and Focus Convolution (DFConv) which extracts both manual and non-manual features without additional networks or annotations and (2) Dense Pseudo-Label Refinement (DPLR) which propagates non-spiky frame-level pseudo-labels by combining the ground truth gloss sequence label with the predicted sequence.
@@ -95,16 +95,24 @@ abstract: >
           <h1 class="title is-3 publication-title">{{ page.title }}</h1>
           <div class="is-size-4 publication-authors">
             <span class="author-block">
+              <a href="https://art-jang.github.io">Youngjoon Jang</a><sup>1</sup>,</span>
+            <span class="author-block">
               <a href="https://ytaek-oh.github.io">Youngtaek Oh</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://https://chojw.github.io/">Jae Won Cho</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://ytaek-oh.github.io">Myungchul Kim</a><sup>1</sup>,</span>
             <span class="author-block">
               <a href="https://sites.google.com/site/djkimcv/">Dong-Jin Kim</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="#">In So Kweon</a><sup>1</sup>,
+              <a href="https://scholar.google.com/citations?user=XA8EOlEAAAAJ&hl=ko">In So Kweon</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://https://mm.kaist.ac.kr/joon/">Joon Son Chung</a><sup>1</sup>,</span>
             </span>
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>KAIST, South Korea.</span>
-            <span class="author-block"><sup>2</sup>UC Berkeley / ICSI, CA.</span>
+            <span class="author-block"><sup>1</sup>KAIST, Daejeon, South Korea.</span>
+            <span class="author-block"><sup>2</sup>Hanyang University / Seoul, South Korea.</span>
           </div>
           <div class="column has-text-centered">
             <div class="publication-links">
