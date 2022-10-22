@@ -2,33 +2,32 @@
 layout: none
 title: Self-Sufficient Framework for Sign Language Recognition
 permalink: /ssslr
-description: A new framework DASO, Distribution-Aware Semantics-Oriented Pseudo-label alleviates biases in pseudo-labels under diverse imbalanced semi-supervised learning scenarios.
-keywords: "Semi-supervised learning, Class-imbalanced learning, Long-tailed distribution"
-title: "DASO: Distribution-Aware Semantics-Oriented Pseudo-label for Imbalanced Semi-Supervised Learning"
-venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2022)"
-pdf: https://openaccess.thecvf.com/content/CVPR2022/html/Oh_DASO_Distribution-Aware_Semantics-Oriented_Pseudo-Label_for_Imbalanced_Semi-Supervised_Learning_CVPR_2022_paper.html
-arxiv: https://arxiv.org/abs/2106.05682
-code: https://github.com/ytaek-oh/daso
-slide: slide.pdf
-poster: poster.pdf
-bibtex: >
-  @inproceedings{oh2022daso, <br />
-  &nbsp;&nbsp; title={DASO: Distribution-Aware Semantics-Oriented Pseudo-label for Imbalanced Semi-Supervised Learning}, <br />
-  &nbsp;&nbsp; author={Oh, Youngtaek and Kim, Dong-Jin and Kweon, In So}, <br />
-  &nbsp;&nbsp; booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, <br />
-  &nbsp;&nbsp; year={2022}, <br />
-  &nbsp;&nbsp; pages={9786-9796} <br />
-  }
+description: Self-Sufficient Framework for Sign Language Recognition.
+keywords: "Sign language recognition, Pseudo-labels, Vision and language"
+title: "Self-Sufficient Framework for Sign Language Recognition"
+# venue: False
+# pdf: False
+# arxiv: False
+# code: False
+# slide: False
+# poster: False
+# bibtex: >
+#   @inproceedings{oh2022daso, <br />
+#   &nbsp;&nbsp; title={DASO: Distribution-Aware Semantics-Oriented Pseudo-label for Imbalanced Semi-Supervised Learning}, <br />
+#   &nbsp;&nbsp; author={Oh, Youngtaek and Kim, Dong-Jin and Kweon, In So}, <br />
+#   &nbsp;&nbsp; booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, <br />
+#   &nbsp;&nbsp; year={2022}, <br />
+#   &nbsp;&nbsp; pages={9786-9796} <br />
+#   }
 abstract: >
   <p>
-    The capability of the traditional semi-supervised learning (SSL) methods is far from real-world application due to severely biased pseudo-labels caused by (1) class imbalance and (2) class distribution mismatch between labeled and unlabeled data.
+    The goal of this work is to devise a \emph{self-sufficient} CSLR framework that addresses the issues of sign language recognition, including (1) the demand for complex features such as hands, face, and mouth for understanding and (2) the absence of frame level annotations.
   </p>
   <p>
-    This paper addresses such a relatively under-explored problem. First, we propose a general pseudo-labeling framework that class-adaptively blends the semantic pseudo-label from a similarity-based classifier to the linear one from the linear classifier, after making the observation that both types of pseudo-labels have complementary properties in terms of bias. We further introduce a novel semantic alignment loss to establish balanced feature representation to reduce the biased predictions from the classifier. 
-    We term the whole framework as Distribution-Aware Semantics-Oriented (DASO) Pseudo-label.
+    To this end, we propose (1) Divide and Focus Convolution (DFConv) which extracts both manual and non-manual features without additional networks or annotations and (2) Dense Pseudo-Label Refinement (DPLR) which propagates non-spiky frame-level pseudo-labels by combining the ground truth gloss sequence label with the predicted sequence.
   </p>
   <p>
-    We conduct extensive experiments in a wide range of imbalanced benchmarks: CIFAR10/100-LT, STL10-LT, and large-scale long-tailed Semi-Aves with open-set class, and demonstrate that, the proposed DASO framework reliably improves SSL learners with unlabeled data especially when both (1) class imbalance and (2) distribution mismatch dominate.
+    We demonstrate that our model achieves state-of-the-art performance among RGB-based methods experimentally on large-scale CSLR benchmarks, PHOENIX-2014 and PHOENIX-2014-T, while showing comparable results with better efficiency compared to the other approaches that use multi-modality or extra annotations.
   </p>
 ---
 
