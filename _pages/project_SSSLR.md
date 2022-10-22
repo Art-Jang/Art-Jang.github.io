@@ -292,7 +292,7 @@ abstract: >
         <h3 class="title is-5">Divide and Focus Convolution</h3>
         <div class="hero-body">
           <div class="columns is-centered">
-            <div class="column is-9">
+            <div class="column is-11">
               <img src="assets/ssslr/dfconv.png"/>
             </div>
           </div>
