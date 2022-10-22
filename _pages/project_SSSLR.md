@@ -243,9 +243,16 @@ abstract: >
           <p class="mb-4">
             We show our framework's the robustness in a real world scenario by chainging scale and translation during the inference time. Futhermore, we show the failure cases of pose-detector in STMC, where the transformation (scale, translation) are adapted. Note that our framework requires only RGB modality.
           </p>
-          <img src="assets/ssslr/robustness.png"/>
-          </p>
-          <img src="assets/ssslr/robustness_results.png"/>
+          <div class="columns is-centered">
+            <div class="column is-6">
+              <img src="assets/ssslr/robustness.png"/>
+            </div>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-7">
+              <img src="assets/ssslr/robustness_results.png"/>
+            </div>
+          </div>
         </div>
         <!-- different imbalance -->
         <h3 class="title is-5">Various class imbalance ($ \gamma_l \neq \gamma_u $)</h3>
