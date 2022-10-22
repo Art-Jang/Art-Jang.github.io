@@ -21,7 +21,7 @@ title: "Self-Sufficient Framework for Sign Language Recognition"
 #   }
 abstract: >
   <p>
-    The goal of this work is to devise a self-sufficient CSLR framework that addresses the issues of sign language recognition, including (1) the demand for complex features such as hands, face, and mouth for understanding and (2) the absence of frame level annotations.
+    The goal of this work is to devise a self-sufficient framework for Continuous Sign Language Recognition (CSLR) that addresses the issues of sign language recognition,  including (1) the demand for complex features such as hands, face, and mouth for understanding and (2) the absence of frame level annotations.
   </p>
   <p>
     To this end, we propose (1) Divide and Focus Convolution (DFConv) which extracts both manual and non-manual features without additional networks or annotations and (2) Dense Pseudo-Label Refinement (DPLR) which propagates non-spiky frame-level pseudo-labels by combining the ground truth gloss sequence label with the predicted sequence.
@@ -78,7 +78,7 @@ abstract: >
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://ytaek-oh.github.io">
+      <a class="navbar-item" href="https://art-jang.github.io">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -226,93 +226,26 @@ abstract: >
   </div>
 </section>
 
-<!-- Introduction -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Introduction</h2> 
-        <div class="content has-text-justified">
-          <p>
-            Many real-world datasets exhibit <i>long-tailed</i> distributions. With such class imbalanced data, semi-supervised learning (SSL) methods produce biased pseudo-labels, which can further bias the model during training.
-            The bias of pseudo-labels also depends on <i>class distribution mismatch</i> between labeled and unlabeled data, in addition to the class-imbalance.
-          </p>
-        </div>
-        <div class="hero-body">
-          <div class="columns is-centered is-vcentered">
-            <!-- figure -->
-            <div class="column">
-              <img src="assets/daso/teaser.PNG"/>
-            </div>
-            <!-- caption -->
-            <div class="column">
-                <h2 class="subtitle has-text-justified">
-                  DASO reduces overall bias in pseudo-labels caused by imbalanced data, by blending two complementary pseudo-labels from different classifiers. We conceptually illustrate the bias as relative pseudo-label size, meaning that pseudo-label size is normalized by the actual label size.
-                </h2>
-            </div>
-            <!--/ caption -->
-          </div>
-        </div>
-        <div class="content has-text-justified">
-          <p>
-            We present a new imbalanced SSL method for debiasing pseudo-labels under class-imbalanced data, while discarding the common assumption that class distributions of labeled data and unlabeled data are identical. 
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--/ introduction -->
-
-<!-- motivation -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Motivation</h2> 
-        <div class="content has-text-justified">
-          <p>
-            We observe that semantic pseudo-labels from a similarity-based classifier are biased towards minority classes as opposed to linear classifier-based pseudo-labels being biased towards head classes.
-          </p>
-          <p>
-            FixMatch and USADTM are recent methods that learn solely from linear pseudo-labels and semantic pseudo-labels, respectively.
-          </p>
-        </div>
-        <div class="hero-body">
-          <img src="assets/daso/motivation.png"/>
-          <h2 class="my-1 subtitle has-text-centered">
-            Although USADTM improves the recall of minority classes in (a), the precision of those classes is significantly reduced compared to FixMatch in (b). DASO improves the recall of minority classes while maintaining the precision, leading to higher test accuracy.
-          </h2>
-        </div>
-        <div class="content has-text-justified">
-          <p>
-            Based on the observation, we exploit the linear and semantic pseudo-labels <i>differently</i> in different classes for debaising. For example, when linear pseudo-label points to the majorities, more semantic pseudo-label component contributes to the final pseudo-label to prevent false positives towards head classes, and the vice versa when the linear pseudo-label predicts minority. 
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--/ motivation -->
-
 <!-- Results -->
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Experimental Results</h2> 
+        <h2 class="title is-3">Supplementary Material</h2> 
         <div class="content has-text-justified">
           <p>
-            We use the imbalanced versions of CIFAR-10/100 and STL-10 under diverse cases of imbalances in unlabeled data ($ \gamma_u \neq \gamma_l$), including the same imbalance with labeled data ($ \gamma_u = \gamma_l$). 
+            We show more quantitative and qualitative results. 
           </p>
         </div>
         <!-- same imbalance -->
-        <h3 class="title is-5">Same class imbalance ($ \gamma_l = \gamma_u $)</h3>
+        <h3 class="title is-5">Robustness Comparison</h3>
         <div class="content has-text-justified">
           <p class="mb-4">
-            We compare DASO with several baseline methods, with or without applying class re-balancing strategies such as LA and ABC.
+            We show our framework's the robustness in a real world scenario by chainging scale and translation during the inference time. Futhermore, we show the failure cases of pose-detector in STMC, where the transformation (scale, translation) are adapted. Note that our framework requires only RGB modality.
           </p>
-          <img src="assets/daso/tab1.png"/>
+          <img src="assets/ssslr/robustness.png"/>
+          </p>
+          <img src="assets/ssslr/robustness_results.png"/>
         </div>
         <!-- different imbalance -->
         <h3 class="title is-5">Various class imbalance ($ \gamma_l \neq \gamma_u $)</h3>
