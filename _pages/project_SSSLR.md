@@ -259,6 +259,7 @@ abstract: >
         <div class="content has-text-justified">
           <p class="mb-4">
             We compare the computational complexity with the most recent multi-cue based method, STMC. Even though the pose detector of STMC is light-weight, it still induces the bottleneck in the inference time. We highlight that DFConv significantly reduces both FLOPs and inference time by pulling out the pose estimator. For reference, in out environment, extracting human keypoints with HRNet [2] from PHOENIX-2014 dataset [3] takes 2-3 GPU days. Note that we implement STMC due to the absence of the code.
+          </p>
         </div>
         <div class="hero-body">
           <div class="columns is-centered">
