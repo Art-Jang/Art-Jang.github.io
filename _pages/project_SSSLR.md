@@ -283,7 +283,7 @@ abstract: >
         <h3 class="title is-5">Divide and Focus Convolution</h3>
         <div class="hero-body">
           <div class="columns is-centered">
-            <div class="column is-7">
+            <div class="column is-5">
               <img src="assets/ssslr/dfconv.png"/>
             </div>
           </div>
@@ -292,21 +292,47 @@ abstract: >
           </h2>
         </div>
         <!-- different imbalance -->
-        <h3 class="title is-5">Tail-class clusters are better identified.</h3>
+        <h3 class="title is-5">Gloss-level Sequence Prediction</h3>
         <div class="content has-text-justified">
           <p>
-            Learning with DASO helps the model to establish tail-class clusters, which can further reduce the biases from the classifier.
+            To explain the effectiveness of DPLR, we show more qualitative results of gloss-level sequence predictions. Note that the extra network is not required for the Dense Pseudo-Labels (DPL), and as the classifier for DPLR is an auxiliary, it does not affect on the inference time, which is important factor to satisfy real-time operation.
           </p>
         </div>
         <div class="hero-body">
           <div class="columns is-centered">
-            <div class="column is-9">
-              <img src="assets/daso/qual2.png"/>
+            <div class="column is-5">
+              <img src="assets/ssslr/qualitative.png"/>
             </div>
           </div>
           <h2 class="subtitle has-text-centered">
-            Comparisons of t-SNE from feature representations.
+            Qualitative results of the predicted gloss sequences on the PHOENIX-2014 Test split. Each color blocks represent different glosses, and the hirizontal axis is the time axis.
           </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Analysis -->
+
+
+<!-- Analysis -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Additional Discussion</h2> 
+        <!-- same imbalance -->
+        <h3 class="title is-5">Potential Societal Impact</h3>
+        <div class="content has-text-justified">
+          <p>
+            Our proposed solution directly contributes to the development of a sign translation system by providing high-quality multi-cue aware visual features to modern sign translation models. Advanced sign interpretation technologies could help socially marginalized deaf people and improve accessibility in social infrastructures such as education and health, which hearing people take for granted. However, current available large-scale PHOENIX/T benchmarks, which are sourced in a specific domain (e.g., weather forecast) could bias the model towards the certain scenario in language and visual appearance, leading to potential miscommunication, which could affect the lives deaf people.
+          </p>
+        </div>
+        <h3 class="title is-5">Limitation and Future Work</h3>
+        <div class="content has-text-justified">
+          <p>
+            Although we have shown that both non-manual and manual expressions are simultaneously captured from a sign video, the limitation of our work would come from the assumption that non-manual expressions occur in upper region of a frame, and vice versa for the manual expressions. While we address the issue by introducing the adaptability of the division ratio r at test time as shown in Fig. 1, not only the position, but also variations in scale of the signer (e.g. due to distance from camera) could be introduced in practical scenarios. Future CSLR works should embrace such practical challenges so that the recognition system can be deployed in the real world with ease. 
+          </p>
         </div>
       </div>
     </div>
@@ -336,11 +362,10 @@ abstract: >
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
   </div>
 </section>
 
-{%- if page.bibtex %}
+<!-- {%- if page.bibtex %}
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
@@ -350,7 +375,7 @@ abstract: >
     <pre><code>{{ page.bibtex }}</code></pre>
   </div>
 </section>
-{%- endif %}
+{%- endif %} -->
 
 <footer class="footer">
   <div class="container">
