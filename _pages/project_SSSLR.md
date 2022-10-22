@@ -231,10 +231,10 @@ abstract: >
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Supplementary Material</h2> 
+        <h2 class="title is-3">Additional Experiments</h2> 
         <div class="content has-text-justified">
           <p>
-            We show more quantitative and qualitative results. 
+            We show more experimental results to support our framework's novelty. 
           </p>
         </div>
         <!-- same imbalance -->
@@ -244,7 +244,7 @@ abstract: >
             We show our framework's the robustness in a real world scenario by chainging scale and translation during the inference time. Futhermore, we show the failure cases of pose-detector in STMC, where the transformation (scale, translation) are adapted. Note that our framework requires only RGB modality.
           </p>
           <div class="columns is-centered">
-            <div class="column is-6">
+            <div class="column is-7">
               <img src="assets/ssslr/robustness.png"/>
             </div>
           </div>
@@ -255,24 +255,12 @@ abstract: >
           </div>
         </div>
         <!-- different imbalance -->
-        <h3 class="title is-5">Various class imbalance ($ \gamma_l \neq \gamma_u $)</h3>
+        <h3 class="title is-5">Efficiency Analysis</h3>
         <div class="content has-text-justified">
           <p class="mb-4">
-            The class distribution of unlabeled data could be either unknown or arguably different from that of labeled data in real-world. To simulate such scenarios, for CIFAR10-LT, uniform distributions ($ \gamma_u = 1$) and flipped long-tailed distribution with respect to labeled data ($ \gamma_u=1/100 $) are considered. For STL10-LT, we only control the degree of imbalance in labeled data ($ \gamma_l $) due to unknown distribution of unlabeled data.
+            We compare the computational complexity with the most recent multi-cue based method, STMC. Even though the pose detector of STMC is light-weight, it still induces the bottleneck in the inference time. We highlight that DFConv significantly reduces both FLOPs and inference time by pulling out the pose estimator. For reference, in out environment, extracting human keypoints with HRNet from PHOENIX-2014 dataset takes 2-3 GPU days. Note that we implement STMC due to the absence of the code.
           </p>
-          <img src="assets/daso/tab2.png"/>
-        </div>
-        <!-- semi-aves -->
-        <h3 class="title is-5">Realistic Scenarios</h3>
-        <div class="content has-text-justified">
-          <p class="mb-4">
-            For real-world scenarios, long-tailed Semi-Aves benchmark including large unlabeled open-set data is considered. Both labeled data ($ \mathcal{X} $) and unlabeled data ($ \mathcal{U} $) show long-tailed distributions, while $ \mathcal{U} $ contains large open-set class examples ($ \mathcal{U}_{\text{out}} $). We report the results on both cases: $ \mathcal{U} = \mathcal{U}_{\text{in}} $ and $ \mathcal{U} = \mathcal{U}_{\text{in}} + \mathcal{U}_{\text{out}} $.
-          </p>
-          <div class="columns is-centered">
-            <div class="column is-6">
-              <img src="assets/daso/tab3.png"/>
-            </div>
-          </div>
+          <img src="assets/ssslr/efficiency.png"/>
         </div>
       </div>
     </div>
@@ -285,27 +273,22 @@ abstract: >
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Qualitative Analysis</h2> 
+        <h2 class="title is-3">Additional Qualitative Results</h2> 
         <div class="content has-text-justified">
           <p>
-            We qualitatively analyze how DASO improves the performance under imbalanced SSL setup. We consider FixMatch as baseline trained on CIFAR10-LT under $ \gamma=100 $ and $ N_1 = 500 $.
+            We visualize more qualitative examples.
           </p>
         </div>
         <!-- same imbalance -->
-        <h3 class="title is-5">Unbiased pseudo-label improves test accuracy.</h3>
-        <div class="content has-text-justified">
-          <p>
-            DASO significantly improves the recall and test accuracy values on the minority classes, while preserving those from the majority classes.
-          </p>
-        </div>
+        <h3 class="title is-5">Divide and Focus Convolution</h3>
         <div class="hero-body">
           <div class="columns is-centered">
-            <div class="column is-9">
-              <img src="assets/daso/qual1.png"/>
+            <div class="column is-7">
+              <img src="assets/ssslr/dfconv.png"/>
             </div>
           </div>
           <h2 class="subtitle has-text-centered">
-            Comparison of train curves for the recall and test accuracy values. 
+            The comparison of GradCAM activation maps between Ours and VGG-11 backbone network. DFConv better highlights multiple individual elements (hands, faces) across the entire image area whereas VGG-11 simply attends to only hands.
           </h2>
         </div>
         <!-- different imbalance -->
