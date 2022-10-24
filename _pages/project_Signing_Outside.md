@@ -200,11 +200,13 @@ abstract: >
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <div class="column is-7">
-        <img src="assets/signing_outside/scene-phoenix.png"/>
+      <div class="columns is-centered">
+        <div class="column is-11">
+          <img src="assets/signing_outside/scene-phoenix.png"/>
+        </div>
       </div>
       <h2 class="subtitle has-text-centered is-size-5">
-        Examples of video samples with backgrounds for evaluating the background robustness of the model. To best our knowledge, we are the first to construct a benchmark dataset with various backgrounds that can evaluate the background robustness of the CSLR model, and it has a reasonable construction cost in that it reuses existing CSLR datasets and scene datasets.
+        Examples of our Scene-PHOENIX with backgrounds for evaluating the background robustness of the model. To best our knowledge, we are the first to construct a benchmark dataset with various backgrounds that can evaluate the background robustness of the CSLR model, and it has a reasonable construction cost in that it reuses existing CSLR datasets and scene datasets.
       </h2>
     </div>
   </div>
@@ -229,11 +231,28 @@ abstract: >
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Additional Experiments</h2> 
+        <h2 class="title is-3">Introduction</h2> 
         <div class="content has-text-justified">
           <p>
-            We show more experimental results to support our framework's novelty. 
+            Most publicly available CSLR benchmarks are curated from either studio or TV broadcasts, where background images are fixed and monochromatic. A naïve solution to this would be constructing a new dataset outside the studio, but the cost of extensive gloss annotations as well as collecting sign videos with skilled signers present significant challenges.
           </p>
+          <p>
+            To tackle this issue, We make variants of development and test splits of PHOENIX-2014 with our automated pipeline and name our benchmark dataset with diverse backgrounds Scene-PHOENIX.
+          </p>
+        </div>
+        <h3 class="title is-5">Background Attack to the state-of-the-art CSLR model</h3>
+        <div class="content has-text-justified">
+          <p class="mb-4">
+            Based on our Scene-PHOENIX dataset, we find that current CSLR approaches are not robust to background shifts.
+          </p>
+          <div class="columns is-centered">
+            <div class="column is-5">
+              <img src="assets/signing_outside/attack.png"/>
+            </div>
+            <h2 class="subtitle has-text-centered">
+              Word Error Rate (WER) scores from test benchmarks. We attack the state-of-the-art model VAC by chainging the background images in the Test split of PHOENIX-2014 dataset.
+            </h2>
+          </div>          
         </div>
         <!-- same imbalance -->
         <h3 class="title is-5">Robustness Comparison</h3>
