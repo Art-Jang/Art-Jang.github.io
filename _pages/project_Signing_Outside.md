@@ -242,13 +242,13 @@ abstract: >
             </div>
           </div> 
           <p>
-            To tackle this issue, We make variants of development and test splits of PHOENIX-2014 with our automated pipeline and name our benchmark dataset with diverse backgrounds Scene-PHOENIX.
+            To tackle this issue, We make variants of development and test splits of PHOENIX-2014 [1] with our automated pipeline and name our benchmark dataset with diverse backgrounds Scene-PHOENIX.
           </p>
         </div>
         <h3 class="title is-5">Background Attack to CSLR models</h3>
         <div class="content has-text-justified">
           <p class="mb-4">
-            Based on our Scene-PHOENIX dataset, we find that current CSLR approaches are not robust to background shifts. Baseline (ResNet-18+1D-CNN) and VAC which is the state-of-the-art model in the CSLR field severely degrade when tested on Scene-PHOENIX.
+            Based on our Scene-PHOENIX dataset, we find that current CSLR approaches are not robust to background shifts. Baseline (ResNet-18 [2] + 1D-CNN) and VAC [3] which is the state-of-the-art model in the CSLR field severely degrade when tested on Scene-PHOENIX.
           </p>
         </div>
         <div class="hero-body">
@@ -274,7 +274,7 @@ abstract: >
         <h2 class="title is-3">Background Agnostic Framework</h2> 
         <div class="content has-text-justified">
           <p>
-            Our framework comprises of (1) Background Randomization (BR), which simply generates a sign video with new background via mixup to simulate background shift, and (2) Disentangling Auto-Encoder (DAE) that aims to disentangle the signer from videos with background in latent space.
+            Our framework comprises of (1) Background Randomization (BR), which simply generates a sign video with new background via mixup [4] to simulate background shift, and (2) Disentangling Auto-Encoder (DAE) that aims to disentangle the signer from videos with background in latent space.
           </p>
         </div>
         <!-- same imbalance -->
@@ -318,19 +318,19 @@ abstract: >
         <h3 class="title is-5">Main Restuls</h3>
         <div class="hero-body">
           <div class="columns is-centered">
-            <div class="column is-7">
+            <div class="column is-10">
               <img src="assets/signing_outside/main_result.png"/>
             </div>
           </div>
           <h2 class="subtitle has-text-centered">
-            Experimental results on PHOENIX-2014 and Scene-PHOENIX. VAC-Oracle is a VAC model that is trained on all LSUN background matted images. While the perfor- mance of the baselines severely degrades under Scene-PHOENIX, the proposed Background Randomization (BR) shows significant performance improvements. Our final model (BR + DAE) shows the best performance among the baseline models. Note that our final model with K = 1 outperforms all VAC w/ BR models. Moreover, Our with K = 1000 surpasses the VAC-Oracle and VAC in both dataset without any off-the-shelf human segmentation masks.
+            Experimental results on PHOENIX-2014 and Scene-PHOENIX. VAC-Oracle is a VAC model that is trained on all LSUN [5] background matted images. While the performance of the baselines severely degrades under Scene-PHOENIX, the proposed Background Randomization (BR) shows significant performance improvements. Our final model (BR + DAE) shows the best performance among the baseline models. Note that our final model with K = 1 outperforms all VAC w/ BR models. Moreover, Our with K = 1000 surpasses the VAC-Oracle and VAC in both dataset without any off-the-shelf human segmentation masks.
           </h2>
         </div>
         <!-- different imbalance -->
         <h3 class="title is-5">Ablation on Additional Training Data</h3>
         <div class="hero-body">
           <div class="columns is-centered">
-            <div class="column is-12">
+            <div class="column is-6">
               <img src="assets/signing_outside/additional_training_data.png"/>
             </div>
           </div>
@@ -341,12 +341,12 @@ abstract: >
         <h3 class="title is-5">Different Backbone Network</h3>
         <div class="hero-body">
           <div class="columns is-centered">
-            <div class="column is-12">
+            <div class="column is-5">
               <img src="assets/signing_outside/backbones.png"/>
             </div>
           </div>
           <h2 class="subtitle has-text-centered">
-            Comparison of performances with different feature extractors: GoogLeNet and ResNet18. Our framework consistently works well with different feature extractors.
+            Comparison of performances with different feature extractors: GoogLeNet [6] and ResNet18. Our framework consistently works well with different feature extractors.
           </h2>
         </div>
       </div>
@@ -397,27 +397,27 @@ abstract: >
       <div class="column is-full-width">
         <h2 class="title is-3">References</h2>
         <div class="content has-text-justified">
-<!--           <p>
-            [1] Zhou, Hao, et al. "Spatial-temporal multi-cue network for continuous sign language recognition." Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 34. No. 07. 2020.
+          <p>
+            [1] Koller, Oscar, Jens Forster, and Hermann Ney. "Continuous sign language recognition: Towards large vocabulary statistical recognition systems handling multiple signers." Computer Vision and Image Understanding 141 (2015): 108-125.
           </p>
           <p>
-            [2] Sun, Ke, et al. "Deep high-resolution representation learning for human pose estimation." Proceedings of the IEEE/CVF conference on computer vision and pattern recognition. 2019
+            [2] He, Kaiming, et al. "Deep residual learning for image recognition." Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.
           </p>
           <p>
-            [3] Koller, Oscar, Jens Forster, and Hermann Ney. "Continuous sign language recognition: Towards large vocabulary statistical recognition systems handling multiple signers." Computer Vision and Image Understanding 141 (2015): 108-125.
+            [3] Min, Yuecong, et al. "Visual alignment constraint for continuous sign language recognition." Proceedings of the IEEE/CVF International Conference on Computer Vision. 2021.
           </p>
           <p>
-            [4] Cheng, Ka Leong, et al. "Fully convolutional networks for continuous sign language recognition." European Conference on Computer Vision. Springer, Cham, 2020.
+            [4] Zhang, Hongyi, et al. "mixup: Beyond empirical risk minimization." arXiv preprint arXiv:1710.09412 (2017).
           </p>
           <p>
-            [5] Min, Yuecong, et al. "Visual alignment constraint for continuous sign language recognition." Proceedings of the IEEE/CVF International Conference on Computer Vision. 2021.
+            [5] Yu, Fisher, et al. "Lsun: Construction of a large-scale image dataset using deep learning with humans in the loop." arXiv preprint arXiv:1506.03365 (2015).
           </p>
           <p>
+            [6] Szegedy, Christian, et al. "Going deeper with convolutions." Proceedings of the IEEE conference on computer vision and pattern recognition. 2015.
+          </p>
+          <!-- <p>
             [6] Selvaraju, Ramprasaath R., et al. "Grad-cam: Visual explanations from deep networks via gradient-based localization." Proceedings of the IEEE international conference on computer vision. 2017.
-          </p>
-          <p>
-            [7] Simonyan, Karen, and Andrew Zisserman. "Very deep convolutional networks for large-scale image recognition." arXiv preprint arXiv:1409.1556 (2014).
-          </p> -->
+           --></p>
         </div>
       </div>
     </div>
