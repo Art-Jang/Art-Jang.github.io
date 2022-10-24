@@ -201,10 +201,10 @@ abstract: >
   <div class="container is-max-desktop">
     <div class="hero-body">
       <div class="column is-7">
-        <img src="assets/signing_outside/teaser.png"/>
+        <img src="assets/signing_outside/scene-phoenix.png"/>
       </div>
       <h2 class="subtitle has-text-centered is-size-5">
-        Our framework is intended to train sign language recognition models without additional annotations. Our model trained on weekly-labeled sign language datasets shows better or comparable performance compared to other methods using multiple modalities or additional knowledge.
+        Examples of video samples with backgrounds for evaluating the background robustness of the model. To best our knowledge, we are the first to construct a benchmark dataset with various backgrounds that can evaluate the background robustness of the CSLR model, and it has a reasonable construction cost in that it reuses existing CSLR datasets and scene datasets.
       </h2>
     </div>
   </div>

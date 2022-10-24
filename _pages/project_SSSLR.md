@@ -4,7 +4,7 @@ title: Self-Sufficient Framework for Continuous Sign Language Recognition
 permalink: /ssslr
 description: Self-Sufficient Framework for Continuous Sign Language Recognition.
 keywords: "Sign language recognition, Pseudo-labels, Vision and language"
-title: "Self-Sufficient Framework for Sign Language Recognition"
+title: "Self-Sufficient Framework for Continuous Sign Language Recognition"
 # venue: False
 # pdf: False
 # arxiv: False
