@@ -5,20 +5,21 @@ permalink: /signing_outside
 description: Benchmarking Background Robustness for Continuous Sign Language Recognition.
 keywords: "Sign language recognition, Background bias, Vision and language"
 title: "Signing Outside the Studio: Benchmarking Background Robustness for Continuous Sign Language Recognition"
-# venue: False
+venue: British Machine Vision Conference (BMVC 2022)
 # pdf: False
 # arxiv: False
 # code: False
 # slide: False
 # poster: False
-# bibtex: >
-#   @inproceedings{oh2022daso, <br />
-#   &nbsp;&nbsp; title={DASO: Distribution-Aware Semantics-Oriented Pseudo-label for Imbalanced Semi-Supervised Learning}, <br />
-#   &nbsp;&nbsp; author={Oh, Youngtaek and Kim, Dong-Jin and Kweon, In So}, <br />
-#   &nbsp;&nbsp; booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, <br />
-#   &nbsp;&nbsp; year={2022}, <br />
-#   &nbsp;&nbsp; pages={9786-9796} <br />
-#   }
+bibtex: >
+  @inproceedings{jang2022signing, <br />
+  &nbsp;&nbsp; title={Signing Outside the Studio: Benchmarking Background Robustness for Continuous Sign Language Recognition}, <br />
+  &nbsp;&nbsp; author={Jang, Youngjoon and Oh, Youngtaek and Cho, Jae Won and Kim, Dong-Jin and Chung, Joon Son and Kweon, In So}, <br />
+  &nbsp;&nbsp; booktitle={British Machine Vision Conference (BMVC)}, <br />
+  &nbsp;&nbsp; year={2022}, <br />
+  &nbsp;&nbsp; pages={0000-0000} <br />
+  }
+
 abstract: >
   <p>
     The goal of this work is background-robust continuous sign language recognition. Most existing Continuous Sign Language Recognition (CSLR) benchmarks have fixed backgrounds and are filmed in studios with a static monochromatic background. However, signing is not limited only to studios in the real world. 
@@ -424,7 +425,7 @@ abstract: >
   </div>
 </section>
 
-<!-- {%- if page.bibtex %}
+{%- if page.bibtex %}
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
@@ -434,7 +435,7 @@ abstract: >
     <pre><code>{{ page.bibtex }}</code></pre>
   </div>
 </section>
-{%- endif %} -->
+{%- endif %}
 
 <footer class="footer">
   <div class="container">
