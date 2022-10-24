@@ -236,11 +236,16 @@ abstract: >
           <p>
             Most publicly available CSLR benchmarks are curated from either studio or TV broadcasts, where background images are fixed and monochromatic. A naïve solution to this would be constructing a new dataset outside the studio, but the cost of extensive gloss annotations as well as collecting sign videos with skilled signers present significant challenges.
           </p>
+          <div class="columns is-centered">
+            <div class="column is-8">
+              <img src="assets/signing_outside/monochromatic.png"/>
+            </div>
+          </div> 
           <p>
             To tackle this issue, We make variants of development and test splits of PHOENIX-2014 with our automated pipeline and name our benchmark dataset with diverse backgrounds Scene-PHOENIX.
           </p>
         </div>
-        <h3 class="title is-5">Background Attack to the state-of-the-art CSLR model</h3>
+        <h3 class="title is-5">Background Attack to CSLR models</h3>
         <div class="content has-text-justified">
           <p class="mb-4">
             Based on our Scene-PHOENIX dataset, we find that current CSLR approaches are not robust to background shifts.
@@ -249,67 +254,16 @@ abstract: >
             <div class="column is-5">
               <img src="assets/signing_outside/attack.png"/>
             </div>
-            <h2 class="subtitle has-text-centered">
-              Word Error Rate (WER) scores from test benchmarks. We attack the state-of-the-art model VAC by chainging the background images in the Test split of PHOENIX-2014 dataset.
-            </h2>
-          </div>          
+          </div>
+          <h2 class="subtitle has-text-centered">
+            Word Error Rate (WER) scores from test benchmarks. We attack the state-of-the-art model VAC by chainging the background images in the Test split of PHOENIX-2014 dataset.
+          </h2>
         </div>
         <!-- same imbalance -->
-        <h3 class="title is-5">Robustness Comparison</h3>
-        <div class="content has-text-justified">
-          <p class="mb-4">
-            We show our framework's the robustness in a real world scenario by chainging scale and translation during the inference time. Futhermore, we show the failure cases of pose-detector in STMC [1], where the transformation (scale, translation) are adapted. Note that our framework requires only RGB modality.
-          </p>
-          <div class="columns is-centered">
-            <div class="column is-7">
-              <img src="assets/ssslr/robustness.png"/>
-            </div>
-          </div>
-          <div class="columns is-centered">
-            <div class="column is-7">
-              <img src="assets/ssslr/robustness_results.png"/>
-            </div>
-          </div>
-        </div>
-        <!-- different imbalance -->
-        <h3 class="title is-5">Efficiency Analysis</h3>
-        <div class="content has-text-justified">
-          <p class="mb-4">
-            We compare the computational complexity with the most recent multi-cue based method, STMC. Even though the pose detector of STMC is light-weight, it still induces the bottleneck in the inference time. We highlight that DFConv significantly reduces both FLOPs and inference time by pulling out the pose estimator. For reference, in out environment, extracting human keypoints with HRNet [2] from PHOENIX-2014 dataset [3] takes 2-3 GPU days. Note that we implement STMC due to the absence of the code.
-          </p>
-        </div>
-        <div class="hero-body">
-          <div class="columns is-centered">
-            <div class="column is-6">
-              <img src="assets/ssslr/efficiency.png"/>
-            </div>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            Comparison of computational cost and inference time with STMC. (*): we directly take the reported results in the original STMC paper.
-          </h2>
-        </div>
-        <!-- different imbalance -->
-        <h3 class="title is-5">Generality of DPLR</h3>
-        <div class="content has-text-justified">
-          <p class="mb-4">
-            To demonstrate the wide applicability of DPLR, we compare DPLR with other CSLR approaches using pseudo-labeling.
-          </p>
-        </div>
-        <div class="hero-body">
-          <div class="columns is-centered">
-            <div class="column is-6">
-              <img src="assets/ssslr/generality.png"/>
-            </div>
-          </div>
-          <h2 class="subtitle has-text-centered">
-             We implement FCN [4] and VAC [5], and replace the GFE and VA modules corresponding to the pseudo-labeling modules of each method with our DPLR module. For both methods, DPLR shows superior  performance compared to previous pseudo-labeling modules: GFE and VA . Moreover, we highlight that DPLR further boosts the full version of VAC, achieving the WER of 21.6% in the Test split. This indicates that DPLR is complementary to the VA module in VAC.
-          </h2>
-        </div>
       </div>
     </div>
   </div>
 </section>
-<!--/ Results -->
 <!-- Analysis -->
 <section class="section">
   <div class="container is-max-desktop">
