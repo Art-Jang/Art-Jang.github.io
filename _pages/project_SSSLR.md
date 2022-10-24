@@ -32,7 +32,7 @@ abstract: >
 ---
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html>
 <head>
   <meta charset="utf-8">
@@ -271,6 +271,23 @@ abstract: >
             Comparison of computational cost and inference time with STMC. (*): we directly take the reported results in the original STMC paper.
           </h2>
         </div>
+        <!-- different imbalance -->
+        <h3 class="title is-5">Generality of DPLR</h3>
+        <div class="content has-text-justified">
+          <p class="mb-4">
+            To demonstrate the wide applicability of DPLR, we compare DPLR with other CSLR approaches using pseudo-labeling.
+          </p>
+        </div>
+        <div class="hero-body">
+          <div class="columns is-centered">
+            <div class="column is-6">
+              <img src="assets/ssslr/generality.png"/>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-centered">
+             Specifically, we consider FCN [4] and VAC [5], and replace the GFE and VA modules corresponding to the pseudo-labeling modules of each method with our DPLR module. For both methods, DPLR shows superior  erformance compared to previous pseudo-labeling modules: GFE and VA . Moreover, we highlight that DPLR further boosts the full version of VAC, achieving the WER of 21.6% in the Test split. This indicates that DPLR is complementary to the VA module in VAC. 
+          </h2>
+        </div>
       </div>
     </div>
   </div>
@@ -297,7 +314,7 @@ abstract: >
             </div>
           </div>
           <h2 class="subtitle has-text-centered">
-            The comparison of GradCAM [4] activation maps between Ours and VGG-11 backbone network. DFConv better highlights multiple individual elements (hands, faces) across the entire image area whereas VGG-11 [5] simply attends to only hands.
+            The comparison of GradCAM [6] activation maps between Ours and VGG-11 backbone network. DFConv better highlights multiple individual elements (hands, faces) across the entire image area whereas VGG-11 [7] simply attends to only hands.
           </h2>
         </div>
         <!-- different imbalance -->
@@ -366,10 +383,16 @@ abstract: >
             [3] Koller, Oscar, Jens Forster, and Hermann Ney. "Continuous sign language recognition: Towards large vocabulary statistical recognition systems handling multiple signers." Computer Vision and Image Understanding 141 (2015): 108-125.
           </p>
           <p>
-            [4] Selvaraju, Ramprasaath R., et al. "Grad-cam: Visual explanations from deep networks via gradient-based localization." Proceedings of the IEEE international conference on computer vision. 2017.
+            [4] Cheng, Ka Leong, et al. "Fully convolutional networks for continuous sign language recognition." European Conference on Computer Vision. Springer, Cham, 2020.
           </p>
           <p>
-            [5] Simonyan, Karen, and Andrew Zisserman. "Very deep convolutional networks for large-scale image recognition." arXiv preprint arXiv:1409.1556 (2014).
+            [5] Min, Yuecong, et al. "Visual alignment constraint for continuous sign language recognition." Proceedings of the IEEE/CVF International Conference on Computer Vision. 2021.
+          </p>
+          <p>
+            [6] Selvaraju, Ramprasaath R., et al. "Grad-cam: Visual explanations from deep networks via gradient-based localization." Proceedings of the IEEE international conference on computer vision. 2017.
+          </p>
+          <p>
+            [7] Simonyan, Karen, and Andrew Zisserman. "Very deep convolutional networks for large-scale image recognition." arXiv preprint arXiv:1409.1556 (2014).
           </p>
         </div>
       </div>
