@@ -285,7 +285,7 @@ abstract: >
             </div>
           </div>
           <h2 class="subtitle has-text-centered">
-             Specifically, we consider FCN [4] and VAC [5], and replace the GFE and VA modules corresponding to the pseudo-labeling modules of each method with our DPLR module. For both methods, DPLR shows superior  erformance compared to previous pseudo-labeling modules: GFE and VA . Moreover, we highlight that DPLR further boosts the full version of VAC, achieving the WER of 21.6% in the Test split. This indicates that DPLR is complementary to the VA module in VAC. 
+             We implement FCN [4] and VAC [5], and replace the GFE and VA modules corresponding to the pseudo-labeling modules of each method with our DPLR module. For both methods, DPLR shows superior  performance compared to previous pseudo-labeling modules: GFE and VA . Moreover, we highlight that DPLR further boosts the full version of VAC, achieving the WER of 21.6% in the Test split. This indicates that DPLR is complementary to the VA module in VAC.
           </h2>
         </div>
       </div>
@@ -293,7 +293,6 @@ abstract: >
   </div>
 </section>
 <!--/ Results -->
-
 <!-- Analysis -->
 <section class="section">
   <div class="container is-max-desktop">
