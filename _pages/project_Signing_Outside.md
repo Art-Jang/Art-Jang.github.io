@@ -258,7 +258,7 @@ abstract: >
             </div>
           </div>
           <h2 class="subtitle has-text-centered">
-            Word Error Rate (WER) scores from test benchmarks. We attack the state-of-the-art model VAC by chainging the background images in the Test split of PHOENIX-2014 dataset.
+            Word Error Rate (WER) scores from test benchmarks. We attack the state-of-the-art model VAC by chainging the background images in the Test split of PHOENIX-2014 dataset. 
           </h2>
         </div>
         <!-- same imbalance -->
