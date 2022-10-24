@@ -281,7 +281,7 @@ abstract: >
         <h3 class="title is-5">Background Randomization</h3>
         <div class="hero-body">
           <div class="columns is-centered">
-            <div class="column is-11">
+            <div class="column is-7">
               <img src="assets/signing_outside/background_generation.png"/>
             </div>
           </div>
@@ -298,7 +298,7 @@ abstract: >
             </div>
           </div>
           <h2 class="subtitle has-text-centered">
-            The overall architecture of the proposed model. The original video passes through Teacher Network, and the background-randomized video passes through Student Notwork. In the latent space, the signer features are swapped with each other. Then, the swapped features are input to the shared DAE decoder for reconstructing the original features. Note the Red arrows show the path during inference.
+            The overall architecture of the proposed model. The original video passes through Teacher Network, and the background-randomized video passes through Student Notwork. In the latent space, the signer features are swapped with each other. Then, the swapped features are input to the shared DAE decoder for reconstructing the original features.
           </h2>
         </div>
       </div>
@@ -313,25 +313,82 @@ abstract: >
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Additional Discussion</h2> 
+        <h2 class="title is-3">Experimental Restuls</h2> 
         <!-- same imbalance -->
-        <h3 class="title is-5">Potential Societal Impact</h3>
-        <div class="content has-text-justified">
-          <p>
-            Our proposed solution directly contributes to the development of a sign translation system by providing high-quality multi-cue aware visual features to modern sign translation models. Advanced sign interpretation technologies could help socially marginalized deaf people and improve accessibility in social infrastructures such as education and health, which hearing people take for granted. However, current available large-scale PHOENIX/T benchmarks, which are sourced in a specific domain (e.g., weather forecast) could bias the model towards the certain scenario in language and visual appearance, leading to potential miscommunication, which could affect the lives deaf people.
-          </p>
+        <h3 class="title is-5">Main Restuls</h3>
+        <div class="hero-body">
+          <div class="columns is-centered">
+            <div class="column is-7">
+              <img src="assets/signing_outside/main_result.png"/>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            Experimental results on PHOENIX-2014 and Scene-PHOENIX. VAC-Oracle is a VAC model that is trained on all LSUN background matted images. While the perfor- mance of the baselines severely degrades under Scene-PHOENIX, the proposed Background Randomization (BR) shows significant performance improvements. Our final model (BR + DAE) shows the best performance among the baseline models. Note that our final model with K = 1 outperforms all VAC w/ BR models. Moreover, Our with K = 1000 surpasses the VAC-Oracle and VAC in both dataset without any off-the-shelf human segmentation masks.
+          </h2>
         </div>
-        <h3 class="title is-5">Limitation and Future Work</h3>
-        <div class="content has-text-justified">
-          <p>
-            Although we have shown that both non-manual and manual expressions are simultaneously captured from a sign video, the limitation of our work would come from the assumption that non-manual expressions occur in upper region of a frame, and vice versa for the manual expressions. While we address the issue by introducing the adaptability of the division ratio r at test time, not only the position, but also variations in scale of the signer (e.g. due to distance from camera) could be introduced in practical scenarios. Future CSLR works should embrace such practical challenges so that the recognition system can be deployed in the real world with ease. 
-          </p>
+        <!-- different imbalance -->
+        <h3 class="title is-5">Ablation on Additional Training Data</h3>
+        <div class="hero-body">
+          <div class="columns is-centered">
+            <div class="column is-12">
+              <img src="assets/signing_outside/additional_training_data.png"/>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            Using DAE is more efficient in annotation cost compared to using pose, which requires extra annotation. We emphasize using additional 100 scene images for BR is much cheaper than annotating pose for training.
+          </h2>
+        </div>
+        <h3 class="title is-5">Different Backbone Network</h3>
+        <div class="hero-body">
+          <div class="columns is-centered">
+            <div class="column is-12">
+              <img src="assets/signing_outside/backbones.png"/>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            Comparison of performances with different feature extractors: GoogLeNet and ResNet18. Our framework consistently works well with different feature extractors.
+          </h2>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!--/ Analysis -->
+
+
+<!-- Analysis -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Qualitative Restuls</h2> 
+        <!-- same imbalance -->
+        <h3 class="title is-5">Grad-CAM Visualization</h3>
+        <div class="hero-body">
+          <div class="columns is-centered">
+            <div class="column is-7">
+              <img src="assets/signing_outside/gradcam_signer_background.png"/>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            By virtue of our Disentangling Auto-Encoder, latent features consistently focus on the signer and background area respectively.
+          </h2>
+        </div>
+        <!-- different imbalance -->
+        <h3 class="title is-5">Gloss Predictions</h3>
+        <div class="hero-body">
+          <div class="columns is-centered">
+            <div class="column is-12">
+              <img src="assets/signing_outside/qualitative.png"/>
+            </div>
+          </div>
+          <h2 class="subtitle has-text-centered">
+            We visualize the frame-level gloss predictions from the models and show the difference when the background shifted. We observe that VAC fails to predict correct glosses with different backgrounds, while our method consistently recognizes glosses regardless of backgrounds.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -340,7 +397,7 @@ abstract: >
       <div class="column is-full-width">
         <h2 class="title is-3">References</h2>
         <div class="content has-text-justified">
-          <p>
+<!--           <p>
             [1] Zhou, Hao, et al. "Spatial-temporal multi-cue network for continuous sign language recognition." Proceedings of the AAAI Conference on Artificial Intelligence. Vol. 34. No. 07. 2020.
           </p>
           <p>
@@ -360,7 +417,7 @@ abstract: >
           </p>
           <p>
             [7] Simonyan, Karen, and Andrew Zisserman. "Very deep convolutional networks for large-scale image recognition." arXiv preprint arXiv:1409.1556 (2014).
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
