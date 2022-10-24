@@ -248,16 +248,18 @@ abstract: >
         <h3 class="title is-5">Background Attack to CSLR models</h3>
         <div class="content has-text-justified">
           <p class="mb-4">
-            Based on our Scene-PHOENIX dataset, we find that current CSLR approaches are not robust to background shifts.
+            Based on our Scene-PHOENIX dataset, we find that current CSLR approaches are not robust to background shifts. Baseline (ResNet-18+1D-CNN) and VAC which is the state-of-the-art model in the CSLR field severely degrade when tested on Scene-PHOENIX.
           </p>
-          <div class="columns is-centered">
-            <div class="column is-5">
-              <img src="assets/signing_outside/attack.png"/>
+          <div class="hero-body">
+            <div class="columns is-centered">
+              <div class="column is-5">
+                <img src="assets/signing_outside/attack.png"/>
+              </div>
             </div>
+            <h2 class="subtitle has-text-centered">
+              Word Error Rate (WER) scores from test benchmarks. We attack the state-of-the-art model VAC by chainging the background images in the Test split of PHOENIX-2014 dataset.
+            </h2>
           </div>
-          <h2 class="subtitle has-text-centered">
-            Word Error Rate (WER) scores from test benchmarks. We attack the state-of-the-art model VAC by chainging the background images in the Test split of PHOENIX-2014 dataset.
-          </h2>
         </div>
         <!-- same imbalance -->
       </div>
@@ -269,39 +271,34 @@ abstract: >
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Additional Qualitative Results</h2> 
+        <h2 class="title is-3">Background Agnostic Framework</h2> 
         <div class="content has-text-justified">
           <p>
-            We visualize more qualitative examples.
+            Our framework comprises of (1) Background Randomization (BR), which simply generates a sign video with new background via mixup to simulate background shift, and (2) Disentangling Auto-Encoder (DAE) that aims to disentangle the signer from videos with background in latent space.
           </p>
         </div>
         <!-- same imbalance -->
-        <h3 class="title is-5">Divide and Focus Convolution</h3>
+        <h3 class="title is-5">Background Randomization</h3>
         <div class="hero-body">
           <div class="columns is-centered">
             <div class="column is-11">
-              <img src="assets/ssslr/dfconv.png"/>
+              <img src="assets/signing_outside/background_generation.png"/>
             </div>
           </div>
           <h2 class="subtitle has-text-centered">
-            The comparison of GradCAM [6] activation maps between Ours and VGG-11 backbone network. DFConv better highlights multiple individual elements (hands, faces) across the entire image area whereas VGG-11 [7] simply attends to only hands.
+            Data generation. (a) For Scene-PHOENIX, background matting is performed with scene images using person masks. (b) For training set, we apply mixup between a sign video and a scene image without person masks to reduce additional labeling cost in training.
           </h2>
         </div>
         <!-- different imbalance -->
-        <h3 class="title is-5">Gloss-level Sequence Prediction</h3>
-        <div class="content has-text-justified">
-          <p>
-            To explain the effectiveness of DPLR, we show more qualitative results of gloss-level sequence predictions. Note that the extra network is not required for the Dense Pseudo-Labels (DPL), and as the classifier for DPLR is an auxiliary, it does not affect on the inference time, which is important factor to satisfy real-time operation.
-          </p>
-        </div>
+        <h3 class="title is-5">Disentangling Auto-Encoder</h3>
         <div class="hero-body">
           <div class="columns is-centered">
             <div class="column is-12">
-              <img src="assets/ssslr/qualitative.png"/>
+              <img src="assets/signing_outside/overall_architecture.png"/>
             </div>
           </div>
           <h2 class="subtitle has-text-centered">
-            Qualitative results of the predicted gloss sequences on the PHOENIX-2014 Test split. Each color blocks represent different glosses, and the hirizontal axis is the time axis.
+            The overall architecture of the proposed model. The original video passes through Teacher Network, and the background-randomized video passes through Student Notwork. In the latent space, the signer features are swapped with each other. Then, the swapped features are input to the shared DAE decoder for reconstructing the original features. Note the Red arrows show the path during inference.
           </h2>
         </div>
       </div>
