@@ -250,16 +250,16 @@ abstract: >
           <p class="mb-4">
             Based on our Scene-PHOENIX dataset, we find that current CSLR approaches are not robust to background shifts. Baseline (ResNet-18+1D-CNN) and VAC which is the state-of-the-art model in the CSLR field severely degrade when tested on Scene-PHOENIX.
           </p>
-          <div class="hero-body">
-            <div class="columns is-centered">
-              <div class="column is-5">
-                <img src="assets/signing_outside/attack.png"/>
-              </div>
+        </div>
+        <div class="hero-body">
+          <div class="columns is-centered">
+            <div class="column is-5">
+              <img src="assets/signing_outside/attack.png"/>
             </div>
-            <h2 class="subtitle has-text-centered">
-              Word Error Rate (WER) scores from test benchmarks. We attack the state-of-the-art model VAC by chainging the background images in the Test split of PHOENIX-2014 dataset.
-            </h2>
           </div>
+          <h2 class="subtitle has-text-centered">
+            Word Error Rate (WER) scores from test benchmarks. We attack the state-of-the-art model VAC by chainging the background images in the Test split of PHOENIX-2014 dataset.
+          </h2>
         </div>
         <!-- same imbalance -->
       </div>
