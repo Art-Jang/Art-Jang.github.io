@@ -101,13 +101,13 @@ abstract: >
             <span class="author-block">
               <a href="https://chojw.github.io/">Jae Won Cho</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://ytaek-oh.github.io">Myungchul Kim</a><sup>1</sup>,</span>
+              <a href="">Myungchul Kim</a><sup>1</sup>,</span>
             <span class="author-block">
               <a href="https://sites.google.com/site/djkimcv/">Dong-Jin Kim</a><sup>2</sup>,</span>
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=XA8EOlEAAAAJ&hl=ko">In So Kweon</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://https://mm.kaist.ac.kr/joon/">Joon Son Chung</a><sup>1</sup>,</span>
+              <a href="https://mm.kaist.ac.kr/joon/">Joon Son Chung</a><sup>1</sup>,</span>
           </div>
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>KAIST / Daejeon, South Korea.</span>
