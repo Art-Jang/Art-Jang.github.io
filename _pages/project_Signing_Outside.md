@@ -16,9 +16,9 @@ bibtex: >
   &nbsp;&nbsp; title={Signing Outside the Studio: Benchmarking Background Robustness for Continuous Sign Language Recognition}, <br />
   &nbsp;&nbsp; author={Jang, Youngjoon and Oh, Youngtaek and Cho, Jae Won and Kim, Dong-Jin and Chung, Joon Son and Kweon, In So}, <br />
   &nbsp;&nbsp; booktitle={British Machine Vision Conference (BMVC)}, <br />
-  &nbsp;&nbsp; year={2022}, <br />
-  &nbsp;&nbsp; pages={0000-0000} <br />
+  &nbsp;&nbsp; year={2022} <br />
   }
+#   &nbsp;&nbsp; pages={0000-0000} <br />
 
 abstract: >
   <p>
