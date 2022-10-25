@@ -226,20 +226,20 @@ abstract: >
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h2 class="title is-3">CAT</h2>
-            <img src="assets/KWS/grad_Final_CAT.png"/>
+            <h2 class="title is-3">SPEECH</h2>
+            <img src="assets/KWS/grad_Final_SPEECH.png"/>
           </div>
         </div>
         <div class="column">
           <div class="content">
-            <h2 class="title is-3">FIRST</h2>
-            <img src="assets/KWS/grad_Final_FIRST.png"/>
+            <h2 class="title is-3">PRINCE</h2>
+            <img src="assets/KWS/grad_Final_PRINCE.png"/>
           </div>
         </div>
         <div class="column">
           <div class="content">
-            <h2 class="title is-3">GREAT</h2>
-            <img src="assets/KWS/grad_Final_GREAT.png"/>
+            <h2 class="title is-3">FINGERS</h2>
+            <img src="assets/KWS/grad_Final_FINGERS.png"/>
           </div>
         </div>
       </div>
