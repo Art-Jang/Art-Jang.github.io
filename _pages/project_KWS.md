@@ -268,7 +268,7 @@ abstract: >
 </section>
 
 <!-- Results -->
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
@@ -463,7 +463,7 @@ abstract: >
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 {%- if page.bibtex %}
 <section class="section" id="BibTeX">
