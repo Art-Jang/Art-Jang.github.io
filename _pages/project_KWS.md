@@ -1,7 +1,7 @@
 ---
 layout: none
 title: Metric Learning for User-defined Keyword Spotting
-permalink: /KWS
+permalink: /kws
 description: Benchmarking Background Robustness for Continuous Sign Language Recognition.
 keywords: "User-defined keyword spotting, Metric learning"
 title: "Metric Learning for User-defined Keyword Spotting"
@@ -204,13 +204,12 @@ abstract: >
   <div class="container is-max-desktop">
     <div class="hero-body">
       <div class="columns is-centered">
-        <div class="column is-11">
-          <img src="assets/signing_outside/scene-phoenix.png"/>
+        <div class="column is-full-width">
+          <img src="assets/KWS/grad_Final_CAT.png"/>
+          <img src="assets/KWS/grad_Final_FIRST.png"/>
+          <img src="assets/KWS/grad_Final_GREAT.png"/>
         </div>
       </div>
-      <h2 class="subtitle has-text-centered is-size-5">
-        Examples of our Scene-PHOENIX with backgrounds for evaluating the background robustness of the model. To best our knowledge, we are the first to construct a benchmark dataset with various backgrounds that can evaluate the background robustness of the CSLR model, and it has a reasonable construction cost in that it reuses existing CSLR datasets and scene datasets.
-      </h2>
     </div>
   </div>
 </section>
