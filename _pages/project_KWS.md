@@ -208,18 +208,21 @@ abstract: >
           <div class="content">
             <h2 class="title is-3">CAT</h2>
             <img src="assets/KWS/grad_Final_CAT.png"/>
+            <audio controls=""><source src="KWS/CAT_9023-296468-0028_1.wav" type="audio/wav"></audio>
           </div>
         </div>
         <div class="column">
           <div class="content">
             <h2 class="title is-3">FIRST</h2>
             <img src="assets/KWS/grad_Final_FIRST.png"/>
+            <audio controls=""><source src="KWS/FIRST_737-123448-0014_4.wav" type="audio/wav"></audio>
           </div>
         </div>
         <div class="column">
           <div class="content">
             <h2 class="title is-3">GREAT</h2>
             <img src="assets/KWS/grad_Final_GREAT.png"/>
+            <audio controls=""><source src="KWS/GREAT_6399-278844-0007_15.wav" type="audio/wav"></audio>
           </div>
         </div>
       </div>
@@ -228,18 +231,21 @@ abstract: >
           <div class="content">
             <h2 class="title is-3">SPEECH</h2>
             <img src="assets/KWS/grad_Final_SPEECH.png"/>
+            <audio controls=""><source src="KWS/SPEECH_3285-121401-0034_7.wav" type="audio/wav"></audio>
           </div>
         </div>
         <div class="column">
           <div class="content">
             <h2 class="title is-3">PRINCE</h2>
             <img src="assets/KWS/grad_Final_PRINCE.png"/>
+            <audio controls=""><source src="KWS/PRINCE_4487-1803-0023_22.wav" type="audio/wav"></audio>
           </div>
         </div>
         <div class="column">
           <div class="content">
             <h2 class="title is-3">FINGERS</h2>
             <img src="assets/KWS/grad_Final_FINGERS.png"/>
+            <audio controls=""><source src="KWS/FINGERS_1748-1562-0042_39.wav" type="audio/wav"></audio>
           </div>
         </div>
       </div>
