@@ -205,9 +205,24 @@ abstract: >
     <div class="hero-body">
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <img src="assets/KWS/grad_Final_CAT.png"/>
-          <img src="assets/KWS/grad_Final_FIRST.png"/>
-          <img src="assets/KWS/grad_Final_GREAT.png"/>
+          <div class="column">
+            <div class="content">
+              <h2 class="title is-3">CAT</h2>
+              <img src="assets/KWS/grad_Final_CAT.png"/>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <h2 class="title is-3">FIRST</h2>
+              <img src="assets/KWS/grad_Final_FIRST.png"/>
+            </div>
+          </div>
+          <div class="column">
+            <div class="content">
+              <h2 class="title is-3">GREAT</h2>
+              <img src="assets/KWS/grad_Final_GREAT.png"/>
+            </div>
+          </div>
         </div>
       </div>
     </div>
