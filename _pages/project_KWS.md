@@ -33,7 +33,7 @@ abstract: >
 ---
 
 
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -267,170 +267,6 @@ abstract: >
   </div>
 </section>
 
-<!-- Results -->
-<!-- <section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Introduction</h2> 
-        <div class="content has-text-justified">
-          <p>
-            Most publicly available CSLR benchmarks are curated from either studio or TV broadcasts, where background images are fixed and monochromatic. A naïve solution to this would be constructing a new dataset outside the studio, but the cost of extensive gloss annotations as well as collecting sign videos with skilled signers present significant challenges.
-          </p>
-          <div class="columns is-centered">
-            <div class="column is-8">
-              <img src="assets/signing_outside/monochromatic.png"/>
-            </div>
-          </div> 
-          <p>
-            To tackle this issue, We make variants of development and test splits of PHOENIX-2014 [1] with our automated pipeline and name our benchmark dataset with diverse backgrounds Scene-PHOENIX.
-          </p>
-        </div>
-        <h3 class="title is-5">Background Attack to CSLR models</h3>
-        <div class="content has-text-justified">
-          <p class="mb-4">
-            Based on our Scene-PHOENIX dataset, we find that current CSLR approaches are not robust to background shifts. Baseline (ResNet-18 [2] + 1D-CNN) and VAC [3] which is the state-of-the-art model in the CSLR field severely degrade when tested on Scene-PHOENIX.
-          </p>
-        </div>
-        <div class="hero-body">
-          <div class="columns is-centered">
-            <div class="column is-5">
-              <img src="assets/signing_outside/attack.png"/>
-            </div>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            Word Error Rate (WER) scores from test benchmarks. We attack the state-of-the-art model VAC by chainging the background images in the Test split of PHOENIX-2014 dataset. 
-          </h2>
-        </div>
-        <!-- same imbalance -->
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Analysis -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Background Agnostic Framework</h2> 
-        <div class="content has-text-justified">
-          <p>
-            Our framework comprises of (1) Background Randomization (BR), which simply generates a sign video with new background via mixup [4] to simulate background shift, and (2) Disentangling Auto-Encoder (DAE) that aims to disentangle the signer from videos with background in latent space.
-          </p>
-        </div>
-        <!-- same imbalance -->
-        <h3 class="title is-5">Background Randomization</h3>
-        <div class="hero-body">
-          <div class="columns is-centered">
-            <div class="column is-7">
-              <img src="assets/signing_outside/background_generation.png"/>
-            </div>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            Data generation. (a) For Scene-PHOENIX, background matting is performed with scene images using person masks. (b) For training set, we apply mixup between a sign video and a scene image without person masks to reduce additional labeling cost in training.
-          </h2>
-        </div>
-        <!-- different imbalance -->
-        <h3 class="title is-5">Disentangling Auto-Encoder</h3>
-        <div class="hero-body">
-          <div class="columns is-centered">
-            <div class="column is-12">
-              <img src="assets/signing_outside/overall_architecture.png"/>
-            </div>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            The overall architecture of the proposed model. The original video passes through Teacher Network, and the background-randomized video passes through Student Notwork. In the latent space, the signer features are swapped with each other. Then, the swapped features are input to the shared DAE decoder for reconstructing the original features.
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--/ Analysis -->
-
-
-<!-- Analysis -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Experimental Restuls</h2> 
-        <!-- same imbalance -->
-        <h3 class="title is-5">Main Restuls</h3>
-        <div class="hero-body">
-          <div class="columns is-centered">
-            <div class="column is-10">
-              <img src="assets/signing_outside/main_result.png"/>
-            </div>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            Experimental results on PHOENIX-2014 and Scene-PHOENIX. VAC-Oracle is a VAC model that is trained on all LSUN [5] background matted images. While the performance of the baselines severely degrades under Scene-PHOENIX, the proposed Background Randomization (BR) shows significant performance improvements. Our final model (BR + DAE) shows the best performance among the baseline models. Note that our final model with K = 1 outperforms all VAC w/ BR models. Moreover, Our with K = 1000 surpasses the VAC-Oracle and VAC in both dataset without any off-the-shelf human segmentation masks.
-          </h2>
-        </div>
-        <!-- different imbalance -->
-        <h3 class="title is-5">Ablation on Additional Training Data</h3>
-        <div class="hero-body">
-          <div class="columns is-centered">
-            <div class="column is-6">
-              <img src="assets/signing_outside/additional_training_data.png"/>
-            </div>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            Using DAE is more efficient in annotation cost compared to using pose, which requires extra annotation. We emphasize using additional 100 scene images for BR is much cheaper than annotating pose for training.
-          </h2>
-        </div>
-        <h3 class="title is-5">Different Backbone Network</h3>
-        <div class="hero-body">
-          <div class="columns is-centered">
-            <div class="column is-5">
-              <img src="assets/signing_outside/backbones.png"/>
-            </div>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            Comparison of performances with different feature extractors: GoogLeNet [6] and ResNet18. Our framework consistently works well with different feature extractors.
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Analysis -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Qualitative Restuls</h2> 
-        <!-- same imbalance -->
-        <h3 class="title is-5">Grad-CAM Visualization</h3>
-        <div class="hero-body">
-          <div class="columns is-centered">
-            <div class="column is-7">
-              <img src="assets/signing_outside/gradcam_signer_background.png"/>
-            </div>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            By virtue of our Disentangling Auto-Encoder, latent features consistently focus on the signer and background area respectively.
-          </h2>
-        </div>
-        <!-- different imbalance -->
-        <h3 class="title is-5">Gloss Predictions</h3>
-        <div class="hero-body">
-          <div class="columns is-centered">
-            <div class="column is-12">
-              <img src="assets/signing_outside/qualitative.png"/>
-            </div>
-          </div>
-          <h2 class="subtitle has-text-centered">
-            We visualize the frame-level gloss predictions from the models and show the difference when the background shifted. We observe that VAC fails to predict correct glosses with different backgrounds, while our method consistently recognizes glosses regardless of backgrounds.
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Concurrent Work. -->
@@ -463,7 +299,7 @@ abstract: >
       </div>
     </div>
   </div>
-</section> -->
+</section>
 
 {%- if page.bibtex %}
 <section class="section" id="BibTeX">
