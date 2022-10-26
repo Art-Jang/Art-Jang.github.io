@@ -2,7 +2,7 @@
 layout: none
 title: Metric Learning for User-defined Keyword Spotting
 permalink: /kws
-description: Benchmarking Background Robustness for Continuous Sign Language Recognition.
+description: User-defined keyword spotting, Metric learning
 keywords: "User-defined keyword spotting, Metric learning"
 title: "Metric Learning for User-defined Keyword Spotting"
 # venue: British Machine Vision Conference (BMVC 2022)
@@ -32,8 +32,6 @@ abstract: >
   </p>
 ---
 
-
-<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
