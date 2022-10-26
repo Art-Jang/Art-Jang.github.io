@@ -234,9 +234,9 @@ abstract: >
         </div>
         <div class="column">
           <div class="content">
-            <h2 class="title is-3">PRINCE</h2>
-            <img src="assets/KWS/grad_Final_PRINCE.png"/>
-            <audio controls=""><source src="assets/KWS/PRINCE_4487-1803-0023_22.wav" type="audio/wav"></audio>
+            <h2 class="title is-3">BEAUTIFUL</h2>
+            <img src="assets/KWS/grad_Final_BEAUTIFUL.png"/>
+            <audio controls=""><source src="assets/KWS/BEAUTIFUL_585-294811-0101_34.wav" type="audio/wav"></audio>
           </div>
         </div>
         <div class="column">
