@@ -265,39 +265,6 @@ abstract: >
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">References</h2>
-        <div class="content has-text-justified">
-          <p>
-            [1] Koller, Oscar, Jens Forster, and Hermann Ney. "Continuous sign language recognition: Towards large vocabulary statistical recognition systems handling multiple signers." Computer Vision and Image Understanding 141 (2015): 108-125.
-          </p>
-          <p>
-            [2] He, Kaiming, et al. "Deep residual learning for image recognition." Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.
-          </p>
-          <p>
-            [3] Min, Yuecong, et al. "Visual alignment constraint for continuous sign language recognition." Proceedings of the IEEE/CVF International Conference on Computer Vision. 2021.
-          </p>
-          <p>
-            [4] Zhang, Hongyi, et al. "mixup: Beyond empirical risk minimization." arXiv preprint arXiv:1710.09412 (2017).
-          </p>
-          <p>
-            [5] Yu, Fisher, et al. "Lsun: Construction of a large-scale image dataset using deep learning with humans in the loop." arXiv preprint arXiv:1506.03365 (2015).
-          </p>
-          <p>
-            [6] Szegedy, Christian, et al. "Going deeper with convolutions." Proceedings of the IEEE conference on computer vision and pattern recognition. 2015.
-          </p>
-          <!-- <p>
-            [6] Selvaraju, Ramprasaath R., et al. "Grad-cam: Visual explanations from deep networks via gradient-based localization." Proceedings of the IEEE international conference on computer vision. 2017.
-           </p>-->
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 {%- if page.bibtex %}
 <section class="section" id="BibTeX">
