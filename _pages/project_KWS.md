@@ -109,8 +109,8 @@ abstract: >
               <a href="https://mm.kaist.ac.kr/joon/">Joon Son Chung</a><sup>1</sup>,</span>
           </div>
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>KAIST / Daejeon, South Korea.</span>
-            <span class="author-block"><sup>2</sup>Hyundai Motor Company / Seoul, South Korea.</span>
+            <span class="author-block"><sup>1</sup>KAIST / Daejeon, Republic of Korea.</span>
+            <span class="author-block"><sup>2</sup>Hyundai Motor Company / Seoul, Republic of Korea.</span>
           </div>
           <div class="column has-text-centered">
             <div class="publication-links">
