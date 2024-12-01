@@ -2,13 +2,17 @@
 ---
 <!-- _layouts/bib.html -->
       <div class="row">
-        <div class="col-sm-2 abbr">
-        {%- if entry.abbr -%}
-          {%- if site.data.venues[entry.abbr] -%}
-          <abbr class="badge"><a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a></abbr>
-          {%- else -%}
+        <div class="col-sm-3 {% if entry.preview %}preview{% else %}abbr{% endif %}">
+        {%- if entry.preview -%}
+          {%- assign preview_image_path = entry.preview | prepend: 'assets/img/publication_preview/' | relative_url -%}
+          {% include figure.html 
+            path=preview_image_path 
+            class="preview img-fluid z-dept-1 rounded"
+            alt=entry.preview
+            zoomable=true
+          -%}
+        {%- elsif entry.abbr -%}
           <abbr class="badge">{{entry.abbr}}</abbr>
-          {%- endif -%}
         {%- endif -%}
         </div>
 
@@ -105,7 +109,12 @@
             {{ periodical | strip }}
           </div>
         {%- endif %}
-        
+        {% if entry.highlight1 -%}
+            {{ entry.highlight1 }}
+        {%- endif -%}
+        {% if entry.highlight2 -%}
+            {{ entry.highlight2 }}
+        {%- endif -%}
           <!-- Links/Buttons -->
           <div class="links">
           {%- if entry.bibtex_show %}

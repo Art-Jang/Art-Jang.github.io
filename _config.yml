@@ -112,8 +112,14 @@ collections:
   projects:
     output: false
     permalink: /projects/:path/
+  honors:
+    defaults:
+      layout: post
+    output: true
+    permalink: /honors/:path/
 
 news_limit: 5
+honors_limit: 5
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -221,7 +227,7 @@ scholar:
   # See https://github.com/alshedivat/al-folio/issues/357.
   bibtex_filters: [latex, smallcaps, superscript]
   # 'bibtex_skip_fields'     => [ :abstract, :month_numeric ],
-  bibtex_skip_fields: [abstract, abbr, bibtex_show, selected, html, website, code, pdf, eqcontrib_start, eqcontrib_end, arxiv, project]
+  bibtex_skip_fields: [abstract, abbr, bibtex_show, selected, html, website, code, pdf, eqcontrib_start, eqcontrib_end, arxiv, project, highlight1]
   replace_strings: true
   join_strings: true
 

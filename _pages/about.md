@@ -6,12 +6,13 @@ subtitle: >
     <p>Contact: jyj [at] mmai.io</p>
 profile:
   align: right
-  image: jyj.jpeg
+  image: jyj.png
   address: Room &#35;3103, N24 Bldg, KAIST.
 
 news: false  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
+honors: true
 ---
 
 <p>I am currently a Ph.D. student advised by Prof. <a href="http://mm.kaist.ac.kr/joon/" target="_blank">Joon Son Chung</a>, in <a href="https://fv.kaist.ac.kr/" target="_blank">Division of Future Vehicle</a> at <a href="https://kaist.ac.kr/en/" target="_blank">Korea Advanced Institute of Science and Technology (KAIST)</a>. 
