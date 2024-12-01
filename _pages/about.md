@@ -15,8 +15,8 @@ social: true  # includes social icons at the bottom of the page
 honors: true
 ---
 
-<p>I am currently a Ph.D. student advised by Prof. <a href="http://mm.kaist.ac.kr/joon/" target="_blank">Joon Son Chung</a>, in <a href="https://fv.kaist.ac.kr/" target="_blank">Division of Future Vehicle</a> at <a href="https://kaist.ac.kr/en/" target="_blank">Korea Advanced Institute of Science and Technology (KAIST)</a>. 
-Previously, I earned my M.S. in <a href="https://fv.kaist.ac.kr/" target="_blank">Division of Future Vehicle</a> from <a href="https://kaist.ac.kr/en/" target="_blank">KAIST</a> (Feb. 2022) and B.S. in <a href="https://cni.kw.ac.kr/" target="_blank">Division of Robotics</a> from <a href="https://www.kw.ac.kr/en/index.jsp" target="_blank">Kwangwoon University</a> (Feb. 2020). </p>
+<p>I am a Ph.D. student advised by Prof. <a href="http://mm.kaist.ac.kr/joon/" target="_blank">Joon Son Chung</a> at <a href="https://kaist.ac.kr/en/" target="_blank">KAIST</a>. 
+I earned my M.S. supervised by Prof. <a href="https://scholar.google.com/citations?user=XA8EOlEAAAAJ&hl=en" target="_blank">In So Kweon</a> at <a href="https://kaist.ac.kr/en/" target="_blank">KAIST</a>. I was a visiting student at <a href="https://www.robots.ox.ac.uk/~vgg/" target="_blank">VGG Group</a>, <a href="https://www.ox.ac.uk/" target="_blank">University of Oxford</a>, under the supervision of Prof. <a href="https://scholar.google.com/citations?user=UZ5wscMAAAAJ&hl=en" target="_blank">Andrew Zisserman</a>. </p>
 
 <!--
 <p>My research focuses on data-hungry problems (e.g., semi-supervised learning) and bias in data labels (e.g., class-imbalance) for deep neural networks. 
